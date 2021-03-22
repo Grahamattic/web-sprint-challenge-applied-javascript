@@ -14,7 +14,7 @@ const Tabs = (topics) => {
   // </div>
   //
 
-  // Grab the Tabs Container
+  // Grab the tabs container.
   const tabs = document.querySelector(".tabs-container");
 
   // Create new markup.
@@ -42,11 +42,10 @@ const Tabs = (topics) => {
 
       });
 
-      tabs.appendChild(topicsDiv);
+  // Append new markup to the Tabs container in the DOM.
+  tabs.appendChild(topicsDiv);
 
 };
-
-Tabs(["JavaScript", "Bootstrap", "Technology", "JQuery", "Node.JS"]);
 
 const tabsAppender = (selector) => {
   // TASK 4
@@ -60,13 +59,11 @@ const tabsAppender = (selector) => {
   // Grab the tabs container.
   const tabs = document.querySelector(selector);
 
-
-
   // Append the topics div created above to the tabs container.
-  tabs.appendChild(Tabs());
+  tabs.appendChild(Tabs(["JavaScript", "Bootstrap", "Technology", "JQuery", "Node.JS"]));
 
 }
 
-//tabsAppender(".tabs-container");
+tabsAppender(".tabs-container");
 
 export { Tabs, tabsAppender }
