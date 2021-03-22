@@ -1,3 +1,4 @@
+  
 const Card = (article) => {
   // TASK 5
   // ---------------------
@@ -16,6 +17,7 @@ const Card = (article) => {
   //     <span>By { authorName }</span>
   //   </div>
   // </div>
+  //
 }
 
 const cardAppender = (selector) => {
