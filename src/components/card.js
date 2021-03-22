@@ -20,9 +20,9 @@ const Card = (article) => {
   //
 
     // Grab the cards container.
-    const cards = document.querySelector(".cars-container")
+    const cards = document.querySelector(".cards-container")
 
-        // Create cards container markup.
+        // Create new HTML markup.
         const card = document.createElement("div");
         const headline = document.createElement("div");
         const author = document.createElement("div");
@@ -30,12 +30,35 @@ const Card = (article) => {
         const img = document.createElement("img");
         const authorName = document.createElement("span");
 
-        // Add required classes to card markup.
+        // Append new markup to the cards container.
+        card.appendChild(headline);
+        card.appendChild(author);
+        card.appendChild(imgContainer);
+
+            // Append image to image container.
+            imgContainer.appendChild(img);
+
+        card.appendChild(authorName);
+
+        // Add classes where applicable to the appended markup.
         card.classList.add("card");
         headline.classList.add("headline");
         author.classList.add("author");
         imgContainer.classList.add("img-container");
-}
+
+        // Set text inside elements according to passed in parameters.
+        headline.textContent = [ headline ];
+        authorName.textContent = [ authorName ];
+
+        // Set author image as img source.
+        document.getElementById(img).src = [ authorPhoto ];
+
+        // Append new markup to the Cards container in the DOM.
+        card.appendChild(cards);
+
+    return card;
+
+};
 
 const cardAppender = (selector) => {
   // TASK 6
@@ -46,6 +69,12 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
+
+    // Grab the cards container.
+    const cards = document.querySelector(selector);
+
+    // Append the cards div created above to the cards container.
+    tabs.appendChild(Tabs(["JavaScript", "Bootstrap", "Technology", "JQuery", "Node.JS"]));
 }
 
 export { Card, cardAppender }
