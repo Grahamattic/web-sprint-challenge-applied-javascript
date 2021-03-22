@@ -18,6 +18,17 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+
+    // Create new markup.
+    const card = document.createElement("div");
+    const headline = document.createElement("div");
+    const author = document.createElement("div");
+    const imgContainer = document.createElement("div");
+    const img = document.createElement("img");
+    const authorName = document.createElement("span");
+
+    // Add classes to markup.
+    topicsDiv.classList.add("topics");
 }
 
 const cardAppender = (selector) => {
