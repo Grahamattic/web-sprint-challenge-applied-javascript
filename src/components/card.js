@@ -16,7 +16,6 @@ const Card = (article) => {
   //     <span>By { authorName }</span>
   //   </div>
   // </div>
-  //
 }
 
 const cardAppender = (selector) => {
