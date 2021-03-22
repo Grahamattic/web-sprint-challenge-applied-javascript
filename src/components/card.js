@@ -19,16 +19,22 @@ const Card = (article) => {
   // </div>
   //
 
-    // Create new markup.
-    const card = document.createElement("div");
-    const headline = document.createElement("div");
-    const author = document.createElement("div");
-    const imgContainer = document.createElement("div");
-    const img = document.createElement("img");
-    const authorName = document.createElement("span");
+    // Grab the cards container.
+    const cards = document.querySelector(".cars-container")
 
-    // Add classes to markup.
-    topicsDiv.classList.add("topics");
+        // Create cards container markup.
+        const card = document.createElement("div");
+        const headline = document.createElement("div");
+        const author = document.createElement("div");
+        const imgContainer = document.createElement("div");
+        const img = document.createElement("img");
+        const authorName = document.createElement("span");
+
+        // Add required classes to card markup.
+        card.classList.add("card");
+        headline.classList.add("headline");
+        author.classList.add("author");
+        imgContainer.classList.add("img-container");
 }
 
 const cardAppender = (selector) => {
