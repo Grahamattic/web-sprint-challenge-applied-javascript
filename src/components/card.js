@@ -30,7 +30,7 @@ const Card = (article) => {
         const img = document.createElement("img");
         const authorName = document.createElement("span");
 
-        // Append new markup to the cards container.
+        // Append new markup to the cards container on the DOM.
         card.appendChild(headline);
         card.appendChild(author);
         card.appendChild(imgContainer);
@@ -74,7 +74,7 @@ const cardAppender = (selector) => {
     const cards = document.querySelector(selector);
 
     // Append the cards div created above to the cards container.
-    tabs.appendChild(Tabs(["JavaScript", "Bootstrap", "Technology", "JQuery", "Node.JS"]));
+    cards.appendChild(Card([".cards-container"]));
 }
 
 export { Card, cardAppender }
